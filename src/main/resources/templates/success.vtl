@@ -1,6 +1,10 @@
 <h1>Success!</h1>
 
-Your task has been saved.
+#if ($task)
+  Your task has been saved.
+#elseif ($category)
+  Your category has been saved.
+#end
 
-<a href="/tasks">View all tasks</a>
-<a href="/tasks/new">Add a new task</a>
+<a href="/categories">View categories</a>
+<a href="/categories/$category.getId()/tasks/new">Add a new task</a>
